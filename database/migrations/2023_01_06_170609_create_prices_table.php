@@ -16,7 +16,10 @@ class CreatePricesTable extends Migration
         Schema::create('prices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('tipe_kendaraan');
-            $table->integer('harga');
+            $table->integer('tarif');
+            $table->integer('waktu_maks')->nullable();
+            $table->integer('tarif_maks')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }

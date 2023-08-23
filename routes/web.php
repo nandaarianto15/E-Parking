@@ -39,13 +39,18 @@ Route::post('/profil', 'App\Http\Controllers\ProfilController@update');
 
 
 Route::get('/masuk', 'App\Http\Controllers\MasukController@index');
-Route::get('/in', 'App\Http\Controllers\MasukController@data');
+Route::get('/masuk/{id}', 'App\Http\Controllers\MasukController@create');
+Route::get('/struk/{kode}', 'App\Http\Controllers\MasukController@struk');
 
 
+// Route::get('/in', 'App\Http\Controllers\MasukController@data');
 Route::post('/karcis', 'App\Http\Controllers\MasukController@karcis');
 Route::get('/karcis{id}', 'App\Http\Controllers\MasukController@print');
 
 
 Route::get('/keluar', 'App\Http\Controllers\KeluarController@index');
-Route::post('/keluar', 'App\Http\Controllers\KeluarController@inp');
-Route::get('/keluar/{id}', 'App\Http\Controllers\KeluarController@inp');
+// Route::post('/keluar-detail', 'App\Http\Controllers\KeluarController@inp');
+Route::post('/transaksi-keluar', 'App\Http\Controllers\KeluarController@inp');
+Route::post('/transaksi-keluar/{kode}', 'App\Http\Controllers\KeluarController@updt');
+
+Route::get('/struk-keluar/{kode_parkir}', 'App\Http\Controllers\KeluarController@keluar');

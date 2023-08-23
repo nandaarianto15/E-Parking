@@ -10,6 +10,11 @@ class Price extends Model
     // use HasFactory;
     public function Keluar()
     {
-        return $this->hasMany('App\Models\Price', 'id', 'type_kendaraan');
+        return $this->hasMany('App\Models\Price', 'id', 'harga');
+    }
+
+    public function Masuk()
+    {
+        return $this->belongsTo('App\Models\Masuk', 'id', 'kode');
     }
 }

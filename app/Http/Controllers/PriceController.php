@@ -22,7 +22,10 @@ class PriceController extends Controller
         
         $harga = new Price;
         $harga -> tipe_kendaraan = $request -> tipe_kendaraan; 
-        $harga -> harga = $request -> harga;
+        $harga -> tarif = $request -> tarif;
+        $harga -> waktu_maks = $request -> waktu_maks;
+        $harga -> tarif_maks = $request -> tarif_maks;
+        $harga -> status = 'Masuk';
         $harga -> save();
         
         Alert::success('Success', 'Data berhasil ditambahkan');
@@ -51,7 +54,7 @@ class PriceController extends Controller
 
         $edit = Price::where('id', $id)->first();
         $edit->tipe_kendaraan = $request->tipe_kendaraan;
-        $edit->harga = $request->harga;
+        $edit->tarif = $request->tarif;
         
         $edit->update();
         // dd($user);

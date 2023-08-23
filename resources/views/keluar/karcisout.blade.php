@@ -1,5 +1,5 @@
 <script>
-    window.location.replace("/masuk");
+    window.location.replace("/keluar");
 </script>
 
 <?php
@@ -26,32 +26,57 @@
             $printer->setJustification(Printer::JUSTIFY_CENTER);
             $printer->text("\n");
 
+
+            
             $printer->initialize();
             $printer->setJustification(Printer::JUSTIFY_LEFT);
             $printer->setTextSize(2, 2);
             $printer->text("SMKN 7 SAMARINDA" . "\n");
             $printer->text("\n");
+
+            foreach ($print as $print) {
             
             $printer->initialize();
             $printer->setFont(Printer::FONT_B);
             $printer->setJustification(Printer::JUSTIFY_LEFT);
-            $printer->text(date('d/m/Y H:i:s'). "\n");
+            $printer->text("Plat :" . $print->plat. "\n");
             $printer->setLineSpacing(5);
             $printer->text("\n\n\n");
+            
+            $printer->initialize();
+            $printer->setFont(Printer::FONT_B);
+            $printer->setJustification(Printer::JUSTIFY_LEFT);
+            $printer->text("Entry :" . $print->created_at . "\n");
+            $printer->setLineSpacing(5);
+            $printer->text("\n\n\n");
+            
+            $printer->initialize();
+            $printer->setFont(Printer::FONT_B);
+            $printer->setJustification(Printer::JUSTIFY_LEFT);
+            $printer->text("Exit :" . $print->updated_at . "\n");
+            $printer->setLineSpacing(5);
+            $printer->text("\n\n\n");
+            
+            $printer->initialize();
+            $printer->setFont(Printer::FONT_B);
+            $printer->setJustification(Printer::JUSTIFY_LEFT);
+            $printer->text("Duration :" . $print->durasi. "\n");
+            $printer->setLineSpacing(5);
+            $printer->text("\n\n\n");
+            
+            $printer->initialize();
+            $printer->setFont(Printer::FONT_B);
+            $printer->setJustification(Printer::JUSTIFY_LEFT);
+            $printer->text("Total :" . $print->harga. "\n");
+            $printer->setLineSpacing(5);
+            $printer->text("\n\n\n");
+            
 
             // $printer->initialize();
             // $printer->setFont(Printer::FONT_A);
             // $printer->setJustification(Printer::JUSTIFY_CENTER);
             // $printer->text("Nomor Antrian Anda Adalah :\n");
             // $printer->text("\n");
-
-            
-            // @foreach ($print as $p)
-            foreach ($print as $print) {
-                    # code...
-                    
-                    // $id = Masuk::find(2);
-            // $id = Masuk::where('id', $id)->first();
             
             // $printer->initialize();
             // $printer->setJustification(Printer::JUSTIFY_LEFT);
@@ -59,8 +84,6 @@
             // $printer->text("P00" .  $print->id . "\n");
             // $printer->text("\n");
             
-            
-            // $kode = Masuk::find(2);
 
             // $printer->initialize();
             // $printer->setFont(Printer::FONT_C);
@@ -71,23 +94,22 @@
             // $printer->text($print->kode . "\n");
             // $printer->text("\n\n");
             
-            $printer->selectPrintmode();
-            $printer->setJustification(Printer::JUSTIFY_LEFT);
-            $printer->setBarcodeHeight(60);
-            $printer->setBarcodewidth(2);
-            $printer->setBarcodeTextPosition(Printer::BARCODE_TEXT_BELOW);
-            $printer->barcode($print->kode, Printer::BARCODE_CODE39);
-            $printer->text("\n\n\n");
-            $printer->feed();
+            // $printer->selectPrintmode();
+            // $printer->setJustification(Printer::JUSTIFY_LEFT);
+            // $printer->setBarcodeHeight(60);
+            // $printer->setBarcodewidth(2);
+            // $printer->setBarcodeTextPosition(Printer::BARCODE_TEXT_BELOW);
+            // $printer->barcode($print->kode, Printer::BARCODE_CODE39);
+            // $printer->text("\n\n\n");
+            // $printer->feed();
             
             }   
-            // @endforeach
             
             $printer->initialize();
             $printer->setFont(Printer::FONT_A);
             $printer->setJustification(Printer::JUSTIFY_LEFT);
-            $printer->text("Jangan Sampai Hilang\n");
-            $printer->text("Terima Kasih\n");
+            $printer->text("Terima kasih atas kunjungannya\n");
+            $printer->text("Selamat Jalan\n");
             $printer->text("\n");
 
             $printer->cut();

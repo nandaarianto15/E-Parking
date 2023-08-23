@@ -7,9 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Masuk extends Model
 {
-    // use HasFactory;
-    public function Keluar()
+    use HasFactory;
+    protected $table = 'masuks';
+
+    protected $fillable = [
+        'id_tarif',
+        'kode',
+    ];
+    // protected $guarded = ['id'];
+
+    public function user()
     {
-        return $this->hasMany('App\Models\Price', 'id', 'type_kendaraan');
+        return $this->belongsTo(User::class, 'id_user', 'id');
+    }
+
+    public function price()
+    {
+        return $this->belongsTo(Price::class, 'id_tarif', 'id');
     }
 }

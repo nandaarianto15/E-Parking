@@ -11,6 +11,8 @@
                         <th scope="col">No</th>
                         <th scope="col">Tipe Kendaraan</th>
                         <th scope="col">Harga</th>
+                        <th scope="col">Waktu Maximal</th>
+                        <th scope="col">Tarif Maximal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,7 +23,9 @@
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $price->tipe_kendaraan }}</td>
-                            <td>{{ $price->harga }}</td>
+                            <td>Rp. {{number_format ($price->tarif) }}</td>
+                            <td>{{number_format ($price->waktu_maks) }} Jam</td>
+                            <td>Rp. {{number_format ($price->tarif_maks) }}</td>
                             <td>
                                 <form method="POST" action="{{ url('price', $price->id ) }}">
                                     @csrf
@@ -55,10 +59,10 @@
                     <div class="modal-body">
                         <form action="{{ url('price') }}" method="POST">
                             @csrf
-                            <label for="tipe_kendaraan" class="col-md-2 col-form-label text-md-end">Tipe:</label>
+                            <label for="tipe_kendaraan" class="col-md-3 col-form-label text-md-end">Tipe</label>
                             <input type="text" name="tipe_kendaraan" required="required"><br><br>
-                            <label for="harga" class="col-md-2 col-form-label text-md-end">Harga</label>
-                            <input type="text" maxlength="999999999999" onkeypress="return hanyaAngka(event)" name="harga" required="required"><br><br>
+                            <label for="harga" class="col-md-3 col-form-label text-md-end">Harga</label>
+                            <input type="text" maxlength="999999999999" onkeypress="return hanyaAngka(event)" name="tarif" required="required"><br><br>
                             <script>
                                 function hanyaAngka(event) {
                                 var angka = (event.which) ? event.which : event.keyCode
@@ -75,8 +79,15 @@
                                 margin: 0;
                                 }
                             </style>
+
+                            <label for="waktu_maks" class="col-md-3 col-form-label tex-md-end">Waktu Max</label>
+                            <input type="number" name="waktu_maks" id=""><br><br>
+                            
+                            <label for="tarif_maks" class="col-md-3 col-form-label tex-md-end">Tarif Max</label>
+                            <input type="text" maxlength="999999999999" onkeypress="return hanyaAngka(event)" name="tarif_maks"><br><br>
+
                                 <button type="submit" class="btn btn-primary" style="margin-left: 70%">Tambah</button>
-                            </form>
+                        </form>
                             <div class="modal-footer">
                         </div>
                     </div>  

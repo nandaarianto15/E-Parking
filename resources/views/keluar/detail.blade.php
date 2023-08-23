@@ -7,36 +7,52 @@
           
           
         <div class="card-body">
-            <form action="/keluar{{ $kode }}" method="post">
+            <form action="/transaksi-keluar/{{ $kode }}" method="post">
                 @csrf
                 <input type="hidden" name="harga" value="{{ $harga }}">
-                <input type="hidden" name="id_price" value="{{ $harga }}">
+                <input type="hidden" name="id_tarif" value="{{ $tarif }}">
                 <input type="hidden" name="id_user" value="{{ $id }}">
                 
                 <div class="row">            
                   <div class="form-group col-6">
                         <h6>Kode Parkir</h6>
-                        <input type="text" class="form-control form-control-sm @error('kode_parkir') is-invalid @enderror" placeholder="Kode Parkir" name="kode_parkir" value="{{ old('kode', $kode) }}" readonly>
+                        <input type="text" class="form-control form-control-sm @error('kode_parkir') is-invalid @enderror" placeholder="Kode Parkir" name="kode" value="{{ old('kode', $kode) }}" readonly>
                         @error('kode_parkir')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-6">
                         <h6>Plat Kendaraan</h6>
-                        <input type="text" class="form-control form-control-sm @error('plat') is-invalid @enderror" placeholder="Plat Kendaraan" name="plat" value="{{ old('plat') }}" autofocus>
+                        <input type="text" maxlength="11" class="form-control form-control-sm @error('plat') is-invalid @enderror" placeholder="Plat Kendaraan" name="plat" value="{{ old('nomor_plat') }}" autofocus required>
                         @error('plat')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
-                   <div class="form-group col-md-4">
+                   {{-- <div class="form-group col-md-4">
                         <h6>Tipe Kendaraan </h6>
                         <select class="form-control" id="position-option" name="position_id">
+                            <option value="tipe_kendaraan">Choose</option>
                         @foreach ($price as $price)
                             <option value="{{ $price->id }}">{{ $price->tipe_kendaraan }}</option>
                         @endforeach
                         </select>
+                    </div> --}}
+
+                    {{-- <div class="form-group col-md-4">
+                        <h6>Tipe Kendaraan </h6>
+                        {{ $masuk->price->id }}
+                    </div>   --}}
+
+                    <div class="form-group col-md-4">
+                        <h6>Gambar</h6>
+                        {{-- <img src="{{ asset('img/2.jfif') }}}" alt="" class="@error('gambar') is-invalid @enderror" placeholder="Gambar" name="gambar" value="{{ old('gambar', $kode) }}" readonly> --}}
+                        <img src="{{ asset('img/parkir/1.png') }}" alt="" style="width: 50%">
                     </div>
+                    {{-- <div class="form-group col-md-4">
+                        <h6>Tipe Kendaraan</h6>
+                        <p>{{ $masuk->price-> }}</p>
+                    </div> --}}
                     {{-- <div class="col-3">
                         <div class="input-group">
                           <div class="input-group-prepend">

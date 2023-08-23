@@ -1,13 +1,28 @@
 @extends('layout.main')
 @section('container')
 
-<form method="POST" action="{{ url('karcis') }}">
+{{-- <?php
+$no = 2;
+while($no<=9)
+?> --}}
+
+{{-- <form method="POST" action="{{ url('karcis') }}">
     @csrf
-    <button type="submit" class="btn btn-primary" onClick="take_snapshot()">Klik Ini</button>
-</form>
+    <button type="button" class="btn btn-primary" onClick="take_snapshot()">Klik Ini</button>
+</form> --}}
 
-<a href="{{ url('/in') }}" type="submit" class="btn btn-primary mb-1">Kendaraan Masuk</a>
+<div class="col-md-12">
+    <div id="webcam">
+        @foreach ($price as $price)
+            <a href="/masuk/{{ $price->id }}">
+                <button type="button" class="btn btn-primary" onclick="take_snapshot()">
+                {{ strtoupper($price->tipe_kendaraan) }}
 
+                </button>
+            </a>
+        @endforeach
+    </div>
+</div>
 
 <div id="my_camera"></div>
 <div>
@@ -33,12 +48,9 @@
     }
 </script> --}}
 
-<!-- CSS -->
 <style>
  #my_camera{
      width: 50%;
-     /* height: 50%; */
-     /* border: 1px solid black; */
      float:right;
 }
 </style>
@@ -63,13 +75,15 @@
 function take_snapshot() {
  
    // take snapshot and get image data
-   Webcam.snap( function(data_url) {
+   Webcam.snap( function(data_uri) {
        // display results in page
        document.getElementById('results').innerHTML = 
-        '<img src="'+data_url+'"/>';
+        '<img src="'+data_uri+'"/>';
     } );
 }
 </script>
+
+
 
 
 @endsection 

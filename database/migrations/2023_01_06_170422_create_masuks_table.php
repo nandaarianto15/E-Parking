@@ -15,9 +15,18 @@ class CreateMasuksTable extends Migration
     {
         Schema::create('masuks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kode');
-            $table->date('tanggal');
-            $table->dateTime('waktu_masuk');
+            // $table->integer('id_user');
+            $table->integer('id_tarif');
+            $table->integer('kode')->unique();
+            $table->string('gambar')->nullable();
+            $table->string('status');
+            $table->string('durasi')->nullable();
+            // $table->string('tipe_kendaraan')->nullable();
+            $table->string('plat')->nullable();
+            $table->integer('harga')->nullable();
+            // $table->date('tanggal');
+            // $table->dateTime('waktu_masuk');
+            // $table->dateTime('waktu_keluar')->nullable();
             $table->timestamps();
         });
     }

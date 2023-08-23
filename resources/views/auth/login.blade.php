@@ -11,7 +11,7 @@
 </head>
 <body>
     <img src="{{ asset('img/android-chrome-512x512.png') }}" alt="" style="width:20%; padding-right: 12%; padding-bottom:10%">
-    <h1 style="position:absolute; font-family:'Jost', sans-serif; left:355px; top:340px; color:#FFB800">E - Parking</h1>
+    <h1 style="position:absolute; font-family:'Jost', sans-serif; left:355px; top:400px; color:#FFB800">E - Parking</h1>
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
