@@ -40,7 +40,7 @@
         </li>
       </ul>
 
-      <div class="footer" style="padding-top: 15%">
+      <div class="footer" style="padding-top: 80%">
         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Nanda Arianto</a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
