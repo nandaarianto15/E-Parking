@@ -13,6 +13,7 @@ class Masuk extends Model
     protected $fillable = [
         'id_tarif',
         'kode',
+        'status'
     ];
     // protected $guarded = ['id'];
 
