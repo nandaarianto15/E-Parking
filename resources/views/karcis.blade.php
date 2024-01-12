@@ -3,8 +3,7 @@
 </script>
 
 <?php
-    
-    // require __DIR__ . '/vendor/autoload.php';
+
     use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
     use Mike42\Escpos\Printer;
     use App\Models\Masuk;
@@ -45,12 +44,9 @@
             // $printer->text("Nomor Antrian Anda Adalah :\n");
             // $printer->text("\n");
 
-            
-            // @foreach ($print as $p)
             foreach ($print as $print) {
-                    # code...
-                    
-                    // $id = Masuk::find(2);
+          
+            // $id = Masuk::find(2);
             // $id = Masuk::where('id', $id)->first();
             
             // $printer->initialize();
@@ -81,7 +77,6 @@
             $printer->feed();
             
             }   
-            // @endforeach
             
             $printer->initialize();
             $printer->setFont(Printer::FONT_A);
