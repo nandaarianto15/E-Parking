@@ -38,12 +38,6 @@
             $printer->setLineSpacing(5);
             $printer->text("\n\n\n");
 
-            // $printer->initialize();
-            // $printer->setFont(Printer::FONT_A);
-            // $printer->setJustification(Printer::JUSTIFY_CENTER);
-            // $printer->text("Nomor Antrian Anda Adalah :\n");
-            // $printer->text("\n");
-
             foreach ($print as $print) {
           
             // $id = Masuk::find(2);
