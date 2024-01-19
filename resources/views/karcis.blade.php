@@ -39,9 +39,6 @@
             $printer->text("\n\n\n");
 
             foreach ($print as $print) {
-          
-            // $id = Masuk::find(2);
-            // $id = Masuk::where('id', $id)->first();
             
             // $printer->initialize();
             // $printer->setJustification(Printer::JUSTIFY_LEFT);
