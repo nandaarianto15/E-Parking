@@ -45,9 +45,6 @@
             // $printer->setTextSize(6, 4);
             // $printer->text("P00" .  $print->id . "\n");
             // $printer->text("\n");
-            
-            
-            // $kode = Masuk::find(2);
 
             // $printer->initialize();
             // $printer->setFont(Printer::FONT_C);
