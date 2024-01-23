@@ -39,12 +39,6 @@
             $printer->text("\n\n\n");
 
             foreach ($print as $print) {
-            
-            // $printer->initialize();
-            // $printer->setJustification(Printer::JUSTIFY_LEFT);
-            // $printer->setTextSize(6, 4);
-            // $printer->text("P00" .  $print->id . "\n");
-            // $printer->text("\n");
 
             // $printer->initialize();
             // $printer->setFont(Printer::FONT_C);
