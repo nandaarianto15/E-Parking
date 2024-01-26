@@ -40,10 +40,6 @@
 
             foreach ($print as $print) {
 
-            // $printer->initialize();
-            // $printer->setFont(Printer::FONT_C);
-            // $printer->setTextSize(2, 2);
-            // $printer->setJustification(Printer::JUSTIFY_LEFT);
             // // {!! DNS1D::getBarcodeHTML("$data->kode", 'C39') !!}
             // // $printer->text(DNS1D::getBarcodeHTML("$print->kode", 'C39') . "\n");
             // $printer->text($print->kode . "\n");
