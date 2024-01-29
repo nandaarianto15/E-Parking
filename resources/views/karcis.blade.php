@@ -39,11 +39,6 @@
             $printer->text("\n\n\n");
 
             foreach ($print as $print) {
-
-            // // {!! DNS1D::getBarcodeHTML("$data->kode", 'C39') !!}
-            // // $printer->text(DNS1D::getBarcodeHTML("$print->kode", 'C39') . "\n");
-            // $printer->text($print->kode . "\n");
-            // $printer->text("\n\n");
             
             $printer->selectPrintmode();
             $printer->setJustification(Printer::JUSTIFY_LEFT);
