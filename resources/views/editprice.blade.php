@@ -7,7 +7,6 @@
             @foreach($prices as $p)
             <form action="{{ url('/pegawai/edit/') }}" method="POST">
                 {{ csrf_field() }}
-                {{-- <input type="text" name="id" value="{{ $p->id }}"> <br/> --}}
                 Tipe Kendaraan <input type="text" required="required" name="tipe_kendaraan" value="{{ $p->tipe_kendaraan }}"> <br/>
                 Harga <input type="text" required="required" name="harga" value="{{ $p->harga }}"> <br/>
                  <br/>
