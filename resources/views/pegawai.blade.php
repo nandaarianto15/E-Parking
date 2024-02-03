@@ -1,7 +1,6 @@
 @extends('layout.main')
 @section('container')
   
-  {{-- <h2 class="mb-4">Hai {{ $user->name }}!</h2> --}}
   <h3><i class='bx bxs-group'></i> pegawai</h3>
   
   <table class="table table-bordered">
