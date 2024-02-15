@@ -17,8 +17,7 @@
     try {
             $connector = new WindowsPrintConnector("TM-T82");
             $printer = new Printer($connector);
-            
-            /** RATA TENGAH */
+
             $title = "TEST PRINTER ANTRIAN";
             $printer->initialize();
             $printer->setFont(Printer::FONT_A);
