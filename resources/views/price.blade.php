@@ -33,12 +33,6 @@
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin menghapus barang ini ?');"><i class="fa fa-trash"></i></button>
                                 </form> 
                             </td>
-                            {{-- <td>
-                                <form action="{{ url('/price/edit/', $price->id) }}" method="">
-                                    @csrf
-                                    <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-pencil-alt"> </i></button>
-                                </form>
-                            </td> --}}
                         </tr>
                     @endforeach
                 </tbody>
