@@ -102,7 +102,6 @@
                     <label for="Alamat" class="col-md-2 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                     <div class="col-md-6">
-                        {{-- <input id="Alamat" type="text" class="form-control @error('Alamat') is-invalid @enderror" name="Alamat" value="{{ $user->Alamat}}" required autocomplete="Alamat" autofocus> --}}
                         <textarea name="alamat" for="alamat" class="form-control @error('alamat')
                             is-invalid
                         @enderror" required="">{{ $user->alamat }}</textarea>
