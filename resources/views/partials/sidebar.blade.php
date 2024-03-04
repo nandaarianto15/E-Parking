@@ -30,7 +30,6 @@
           <a href="{{ route('logout') }}"
               onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
-              {{-- {{ __('Logout') }} --}}
               <i class='bx bx-log-out' ></i> Logout
           </a>
 
