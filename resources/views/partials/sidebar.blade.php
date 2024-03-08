@@ -1,7 +1,6 @@
 <nav id="sidebar">
     <div class="p-4 pt-5">
       <img src="{{ asset('img/android-chrome-512x512.png') }}" alt="" class="img logo rounded-circle mb-5">
-      {{-- <a href="/" class="img logo rounded-circle mb-5" style="background-image: url(img/android-chrome-512x512.png);"></a> --}}
       <ul class="list-unstyled components mb-5">
         <li class="@yield('dashboard_select')">
           <a href="{{ url('home') }}" da ta-toggle="collapse" aria-expanded="false"><i class='bx bxs-home'></i> Home</a>
