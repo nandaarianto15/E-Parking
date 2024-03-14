@@ -11,7 +11,6 @@
             <th scope="col">Tanggal / Waktu masuk</th>
             <th scope="col">Status</th>
             <th scope="col">Gambar</th>
-            {{-- <th scope="col">Alamat</th> --}}
         </tr>
     </thead>
     <tbody>
