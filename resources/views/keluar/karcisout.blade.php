@@ -4,7 +4,6 @@
 
 <?php
     
-    // require __DIR__ . '/vendor/autoload.php';
     use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
     use Mike42\Escpos\Printer;
     use App\Models\Masuk;
@@ -19,7 +18,6 @@
             $connector = new WindowsPrintConnector("TM-T82");
             $printer = new Printer($connector);
             
-            /** RATA TENGAH */
             $title = "TEST PRINTER ANTRIAN";
             $printer->initialize();
             $printer->setFont(Printer::FONT_A);
