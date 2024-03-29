@@ -69,31 +69,6 @@
             $printer->setLineSpacing(5);
             $printer->text("\n\n\n");
             
-            // $printer->initialize();
-            // $printer->setJustification(Printer::JUSTIFY_LEFT);
-            // $printer->setTextSize(6, 4);
-            // $printer->text("P00" .  $print->id . "\n");
-            // $printer->text("\n");
-            
-
-            // $printer->initialize();
-            // $printer->setFont(Printer::FONT_C);
-            // $printer->setTextSize(2, 2);
-            // $printer->setJustification(Printer::JUSTIFY_LEFT);
-            // // {!! DNS1D::getBarcodeHTML("$data->kode", 'C39') !!}
-            // // $printer->text(DNS1D::getBarcodeHTML("$print->kode", 'C39') . "\n");
-            // $printer->text($print->kode . "\n");
-            // $printer->text("\n\n");
-            
-            // $printer->selectPrintmode();
-            // $printer->setJustification(Printer::JUSTIFY_LEFT);
-            // $printer->setBarcodeHeight(60);
-            // $printer->setBarcodewidth(2);
-            // $printer->setBarcodeTextPosition(Printer::BARCODE_TEXT_BELOW);
-            // $printer->barcode($print->kode, Printer::BARCODE_CODE39);
-            // $printer->text("\n\n\n");
-            // $printer->feed();
-            
             }   
             
             $printer->initialize();
