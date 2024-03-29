@@ -69,13 +69,6 @@
             $printer->setLineSpacing(5);
             $printer->text("\n\n\n");
             
-
-            // $printer->initialize();
-            // $printer->setFont(Printer::FONT_A);
-            // $printer->setJustification(Printer::JUSTIFY_CENTER);
-            // $printer->text("Nomor Antrian Anda Adalah :\n");
-            // $printer->text("\n");
-            
             // $printer->initialize();
             // $printer->setJustification(Printer::JUSTIFY_LEFT);
             // $printer->setTextSize(6, 4);
