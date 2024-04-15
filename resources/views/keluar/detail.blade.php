@@ -109,7 +109,7 @@
 <!-- /.container-fluid -->
 
 @endsection
-@push('js')
+@section('js')
 
 {{-- <script>
     function kembalian() {
@@ -121,4 +121,4 @@
         
     }
 </script> --}}
-@endpush
+@endsection
