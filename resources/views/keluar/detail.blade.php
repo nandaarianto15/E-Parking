@@ -5,7 +5,6 @@
 <div class="container-fluid">
     <div class="card mx-3">
           
-          
         <div class="card-body">
             <form action="/transaksi-keluar/{{ $kode }}" method="post">
                 @csrf
