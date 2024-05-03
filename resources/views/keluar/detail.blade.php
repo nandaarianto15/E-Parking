@@ -37,7 +37,6 @@
                         @endforeach
                         </select>
                     </div> --}}
-
                     {{-- <div class="form-group col-md-4">
                         <h6>Tipe Kendaraan </h6>
                         {{ $masuk->price->id }}
