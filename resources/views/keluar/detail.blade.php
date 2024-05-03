@@ -87,6 +87,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+                      
                     {{-- <div class="form-group col-6">
                         <h6>Jumlah Uang</h6>
                         <input type="text" class="form-control form-control-sm" placeholder="Jumlah Uang" id="total" onchange="kembalian()">
