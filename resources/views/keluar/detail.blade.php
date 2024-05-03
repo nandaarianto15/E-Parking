@@ -52,6 +52,7 @@
                         <h6>Tipe Kendaraan</h6>
                         <p>{{ $masuk->price-> }}</p>
                     </div> --}}
+                    
                     {{-- <div class="col-3">
                         <div class="input-group">
                           <div class="input-group-prepend">
@@ -87,6 +88,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+                      
                     {{-- <div class="form-group col-6">
                         <h6>Jumlah Uang</h6>
                         <input type="text" class="form-control form-control-sm" placeholder="Jumlah Uang" id="total" onchange="kembalian()">
