@@ -52,6 +52,7 @@
                         <h6>Tipe Kendaraan</h6>
                         <p>{{ $masuk->price-> }}</p>
                     </div> --}}
+                    
                     {{-- <div class="col-3">
                         <div class="input-group">
                           <div class="input-group-prepend">
