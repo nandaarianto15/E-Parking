@@ -33,7 +33,6 @@
                     <tr>
                         <th class="col-1">No</th>
                         <th class="col-2">Kode</th>
-                        {{-- <th class="col-3">Gambar</th> --}}
                         <th class="col-4">Waktu Masuk</th>
                         <th class="col">Plat</th>
                         {{-- <th class="col">Tipe Kendaraan</th> --}}
@@ -49,9 +48,6 @@
                     @foreach ($masuk as $data)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            {{-- <td>
-                                <div class="col-md-1">{!! DNS1D::getBarcodeHTML("$data->kode", 'C39') !!}</div>
-                            </td> --}}
                             <td>{{ $data->kode }}</td>
                             {{-- <td>{{ $data->gambar }}</td> --}}
                             <td>{{ $data->created_at }}</td>
