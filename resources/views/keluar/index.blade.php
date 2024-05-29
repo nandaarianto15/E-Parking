@@ -64,10 +64,3 @@
 </div> 
 
 @endsection
-                         {{-- <div class="row mb-3">
-                            <label for="plat" class="col-md-1 col-form-label text-md-end">Plat :</label>
-                            
-                            <div class="col-md-5">
-                                <input type="text" name="plat" id="plat" class="col-md-12 form-controller @error('plat') is-invalid @enderror" required autocomplete="" autofocus>                
-                            </div>
-                        </div> --}}
