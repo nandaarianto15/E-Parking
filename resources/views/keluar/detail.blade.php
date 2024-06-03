@@ -109,16 +109,3 @@
 <!-- /.container-fluid -->
 
 @endsection
-@section('js')
-
-{{-- <script>
-    function kembalian() {
-        var total = parseInt(document.getElementById('total').value);
-        var harga = parseInt(document.getElementById('harga').value);
-        console.log(total);
-        var kembalian = total - harga;
-        document.getElementById('kembalian').value(kembalian);
-        
-    }
-</script> --}}
-@endsection
