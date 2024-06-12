@@ -45,7 +45,6 @@
 
                     <div class="form-group col-md-4">
                         <h6>Gambar</h6>
-                        {{-- <img src="{{ asset('img/2.jfif') }}}" alt="" class="@error('gambar') is-invalid @enderror" placeholder="Gambar" name="gambar" value="{{ old('gambar', $kode) }}" readonly> --}}
                         <img src="{{ asset('img/parkir/1.jpeg') }}" alt="" style="width: 50%">
                     </div>
                     {{-- <div class="form-group col-md-4">
