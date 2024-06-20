@@ -1,11 +1,6 @@
 @extends('layout.main')
 @section('container')
 
-{{-- <?php
-$no = 2;
-while($no<=9)
-?> --}}
-
 {{-- <form method="POST" action="{{ url('karcis') }}">
     @csrf
     <button type="button" class="btn btn-primary" onClick="take_snapshot()">Klik Ini</button>
