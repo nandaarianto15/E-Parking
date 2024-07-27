@@ -47,10 +47,6 @@
                         <h6>Gambar</h6>
                         <img src="{{ asset('img/parkir/1.jpeg') }}" alt="" style="width: 50%">
                     </div>
-                    {{-- <div class="form-group col-md-4">
-                        <h6>Tipe Kendaraan</h6>
-                        <p>{{ $masuk->price-> }}</p>
-                    </div> --}}
                     
                     {{-- <div class="col-3">
                         <div class="input-group">
