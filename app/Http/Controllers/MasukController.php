@@ -11,12 +11,9 @@ use DateTime;
 
 class MasukController extends Controller
 {
-    //
-
     public function index()
     {
         $price = Price::where('status', 'Masuk')->get();
-        // dd ($price);
         return view('masuk', compact('price'));
     }
     // public function index()
