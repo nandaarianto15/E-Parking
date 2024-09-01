@@ -16,10 +16,6 @@ class MasukController extends Controller
         $price = Price::where('status', 'Masuk')->get();
         return view('masuk', compact('price'));
     }
-    // public function index()
-    // {
-    //     return view('masuk');
-    // }
 
     public function create(Request $request)
     {
