@@ -52,18 +52,6 @@ class KeluarController extends Controller
         }
     }
 
-    // public function updt(Request $request, $id)
-    // {
-    //     $parkir = Masuk::find($id);
-    //     $parkir -> status = 'Keluar';
-    //     $parkir -> tipe_kendaraan = $request->tipe_kendaraan;
-    //     $parkir -> nomor_plat = $request->nomor_plat;
-    //     $parkir -> duarsi = $request->durasi;
-
-    //     $parkir->update();
-    //     return redirect('keluar');
-    // }
-
     public function updt(Request $request)
     {   
         
